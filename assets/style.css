@@ -1,0 +1,149 @@
+/* Smart City Control Center / Industrial Automation Dashboard Styling */
+
+:root {
+    --bg-dark: #0B0F19;
+    --card-bg: #111827;
+    --card-border: #1F2937;
+    --accent-cyan: #00F0FF;
+    --accent-emerald: #10B981;
+    --accent-amber: #F59E0B;
+    --accent-rose: #EF4444;
+    --text-primary: #F3F4F6;
+    --text-secondary: #9CA3AF;
+}
+
+/* Light Theme Variables */
+[data-theme="light"] {
+    --bg-dark: #F8FAFC;
+    --card-bg: #FFFFFF;
+    --card-border: #E2E8F0;
+    --accent-cyan: #0284C7;
+    --accent-emerald: #059669;
+    --accent-amber: #D97706;
+    --accent-rose: #DC2626;
+    --text-primary: #0F172A;
+    --text-secondary: #64748B;
+}
+
+/* Global Streamlit tweaks */
+.stApp {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hero & Header banner */
+.control-center-banner {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.85));
+    border: 1px solid rgba(0, 240, 255, 0.25);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 240, 255, 0.08);
+}
+
+.banner-light {
+    background: linear-gradient(135deg, #FFFFFF, #F1F5F9) !important;
+    border: 1px solid #CBD5E1 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+.banner-title {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.banner-desc {
+    font-size: 13px;
+    color: var(--text-secondary);
+    margin-top: 6px;
+}
+
+/* Metric KPI Cards */
+.kpi-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.kpi-card:hover {
+    transform: translateY(-2px);
+    border-color: rgba(0, 240, 255, 0.4);
+}
+
+.kpi-card.cyan { border-left: 4px solid var(--accent-cyan); }
+.kpi-card.emerald { border-left: 4px solid var(--accent-emerald); }
+.kpi-card.amber { border-left: 4px solid var(--accent-amber); }
+.kpi-card.rose { border-left: 4px solid var(--accent-rose); }
+
+.kpi-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.kpi-value {
+    font-size: 26px;
+    font-weight: 800;
+    margin: 4px 0 2px 0;
+    font-feature-settings: "tnum";
+}
+
+.kpi-subtext {
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+/* Emergency Hazard Bar */
+.emergency-alarm-bar {
+    background: linear-gradient(90deg, #991B1B, #EF4444, #991B1B);
+    color: #FFFFFF;
+    font-weight: 800;
+    padding: 12px 16px;
+    border-radius: 8px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    margin-bottom: 16px;
+    box-shadow: 0 0 20px rgba(239, 68, 68, 0.6);
+    animation: flash 1s infinite alternate;
+}
+
+@keyframes flash {
+    0% { opacity: 0.85; transform: scale(0.995); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+/* Algorithm Winner Banner */
+.winner-card {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.12), rgba(6, 78, 59, 0.25));
+    border: 1.5px solid var(--accent-emerald);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 16px 0;
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.15);
+}
+
+.winner-card h3 {
+    color: #10B981;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* Decision Cards */
+.decision-card {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+}
